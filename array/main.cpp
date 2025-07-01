@@ -1,4 +1,6 @@
 /*
+Array adalah struktur data yang berfungsi sebagai kumpulan beberapa item
+
 1. index teurut -> 0
 2. tipe data sama
 3. ukuran data sama
