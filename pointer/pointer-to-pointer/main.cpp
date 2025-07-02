@@ -39,7 +39,7 @@ int main()
     std::cout << "nilai sesudah diubah dari double pointer: " << x << std::endl;
     std::cout << "\n";
 
-    int baris = 3, kolom = 4;
+    int baris = 3, kolom = 3;
     int **matrix = new int *[baris]; // -> alokasi memori dinamis untuk array 2 dimensi
 
     for (int i = 0; i < baris; i++)
@@ -60,7 +60,7 @@ int main()
     {
         for (int j = 0; j < kolom; j++)
         {
-            std::cout << matrix[i][j] << " "; // -> menampilkan array
+            std::cout << "matrix[" << i << "][" << j << "]: " << matrix[i][j] << "  "; // -> menampilkan array
         }
         std::cout << std::endl;
     }
