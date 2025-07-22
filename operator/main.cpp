@@ -37,6 +37,7 @@ operator assign
 */
 
 #include <iostream>
+#include <string>
 
 int main()
 {
@@ -86,5 +87,10 @@ int main()
     std::cout << "a *= b: " << (a *= b) << std::endl;
     std::cout << "a /= b: " << (a /= b) << std::endl;
     std::cout << "a %= b: " << (a %= b) << std::endl;
+
+    std::cout << "\nternary operator" << std::endl;
+    std::cout << (a > b ? "a greater than b" : "b greater than a") << std::endl;
+    std::string compare = (a > b) ? "a greater than b" : "b greater than a";
+    std::cout << compare;
     return 0;
 }

@@ -12,13 +12,19 @@ int main()
     std::cout << "\n";
 
     std::vector<int> vector1 = {1, 2, 3, 4, 5};
+    std::cout << vector1.size() << std::endl;
+    vector1.resize(4);
+    vector1.shrink_to_fit();
+    std::cout << vector1.capacity() << std::endl;
+
     for (auto i = vector1.begin(); i != vector1.end(); ++i)
     {
         std::cout << *i << " ";
     }
     std::cout << "\n";
 
-    std::vector<int> vector2 = {10, 20, 30, 40, 50};
+    std::vector<int>
+        vector2 = {10, 20, 30, 40, 50};
     // std::vector<int>::iterator maxElement = -> jika tidak menggunakan auto
     auto maxElement = std::max_element(vector2.begin(), vector2.end());
     std::cout << "max element: " << *maxElement << std::endl;

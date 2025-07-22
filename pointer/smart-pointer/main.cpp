@@ -140,7 +140,7 @@ int main()
     std::unique_ptr<Siswa> siswa2 = std::move(siswa1);
     if (siswa1 == nullptr)
     {
-        std::cout << "siswa1 null dipindah ke siswa2" << std::endl;
+        std::cout << "siswa1 dipindah ke siswa2" << std::endl;
     }
     siswa2->show();
     std::cout << "\n";
