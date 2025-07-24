@@ -47,7 +47,6 @@ std::vector<std::vector<std::string>> groupAnagram(std::vector<std::string> &str
 
         // dua string yang merupakan anagram akan menghasilkan key yang sama.
         std::string key = ss.str();
-        std::cout << key << std::endl;
 
         // masukan string kedalam map dengan kunci hasil frekuensi
         ansMap[key].push_back(s);
