@@ -1,10 +1,8 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-#include <utility>
 
-// menggunakan pair agar bisa mereturn 2 value
-std::pair<int, int> twoSum(std::vector<int> &nums, int target)
+std::vector<int> twoSum(std::vector<int> &nums, int target)
 {
     // membuat hashMap untuk menyimpan number dan index
     std::unordered_map<int, int> map;
@@ -19,7 +17,7 @@ std::pair<int, int> twoSum(std::vector<int> &nums, int target)
         if (map.count(complement))
         {
             // jika menemukan, kembalikan index dari complement dan number sekarang
-            return {map.at(complement), i};
+            return std::vector<int>{map.at(complement), i};
         }
 
         // jika tidak, tambahkan number sekarang dan index ke map
@@ -34,10 +32,17 @@ int main()
     std::vector<int> nums = {2, 7, 11, 15};
     int target = 9;
 
-    auto [i, j] = twoSum(nums, target);
+    std::vector<int> result = twoSum(nums, target);
 
-    std::cout << "index: " << i << " and " << j << " = " << target << std::endl;
-    std::cout << "angka: " << nums[i] << " + " << nums[j] << " = " << target << std::endl;
+    for (auto r : result)
+    {
+        std::cout << r << " ";
+    }
+    std::cout << '\n';
+    for (auto r : result)
+    {
+        std::cout << nums[r] << " ";
+    }
 
     return 0;
 }

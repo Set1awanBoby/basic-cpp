@@ -26,6 +26,7 @@ bool containsDuplicate(std::vector<int> &nums)
         seenNum.insert(num); // set kedalam unordered_set
         // -> {1, 2, 3, 4}
     }
+
     return 0; // Jika loop selesai tanpa menemukan duplikat, maka false dikembalikan.
 }
 
